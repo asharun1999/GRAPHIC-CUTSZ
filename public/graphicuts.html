@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GRAPHICUTS – The Idea to Glow Your Thoughts</title>
+
+<!-- SEO Meta -->
+<meta name="description" content="GRAPHICUTS is a digital creative & IT service agency. Logo design, website development, social media, AI videos, brochures and more. Founded by D. Arun Prasanth.">
+<meta name="keywords" content="GRAPHICUTS, graphic design, logo design, website development, social media marketing, digital marketing, AI video, brochure design, resume design, Arun Prasanth">
+<meta name="author" content="D. Arun Prasanth">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="GRAPHICUTS – The Idea to Glow Your Thoughts">
+<meta property="og:description" content="Creative, digital and IT services for businesses, professionals and brands – all under one roof. Call 8610670804.">
+<meta property="og:image" content="https://graphicuts.com/og-image.jpg">
+<meta property="og:url" content="https://graphicuts.com">
+<meta property="og:site_name" content="GRAPHICUTS">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GRAPHICUTS – The Idea to Glow Your Thoughts">
+<meta name="twitter:description" content="Creative, digital and IT services for businesses, professionals and brands.">
+<meta name="twitter:image" content="https://graphicuts.com/og-image.jpg">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://graphicuts.com">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"GRAPHICUTS",
+  "description":"Digital creative and IT service agency offering logo design, website development, social media marketing, AI video generation, and more.",
+  "founder":{"@type":"Person","name":"D. Arun Prasanth"},
+  "telephone":"+918610670804",
+  "url":"https://graphicuts.com",
+  "sameAs":[
+    "https://www.instagram.com/graphicuts",
+    "https://www.facebook.com/graphicuts",
+    "https://www.youtube.com/@graphicuts"
+  ],
+  "serviceType":["Graphic Design","Website Development","Digital Marketing","Video Production","Social Media Management"]
+}
+</script>
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ───── TOKENS ───── */
+:root{
+  --bg:#050505;--panel:#121212;--line:#2a2a2a;--or:#ff6a00;
+  --tx:#fff;--mut:#a8a8a8;--wa:#25d366;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font-family:"Montserrat","Segoe UI",Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+
+/* ───── NAV ───── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:20;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:calc(14px + env(safe-area-inset-top,0px)) 5vw 14px;
+  background:rgba(5,5,5,.75);backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s;
+}
+nav.scrolled{border-bottom-color:var(--line)}
+nav b{letter-spacing:.12em;font-size:18px}
+nav b i{font-style:normal;color:var(--or)}
+.nav-links{display:flex;gap:26px;font-size:14px}
+.nav-links a{position:relative;padding-bottom:2px}
+.nav-links a::after{content:"";position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--or);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav-links a:hover{color:var(--or)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:.3s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:19;
+  background:rgba(5,5,5,.97);flex-direction:column;justify-content:center;align-items:center;gap:38px;
+  font-size:22px;font-weight:700;letter-spacing:.06em;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a:hover{color:var(--or)}
+@media(max-width:640px){.nav-links{display:none}.nav-toggle{display:block}}
+
+/* ───── HERO ───── */
+.hero{
+  position:relative;min-height:100vh;display:grid;place-items:center;
+  text-align:center;overflow:hidden;perspective:1200px;
+  padding:110px 5vw 80px;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,rgba(5,5,5,.1) 0%,rgba(5,5,5,.82) 70%);
+  pointer-events:none;
+}
+#field{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(55deg) scale(1.6);transform-origin:50% 60%}
+.tile{
+  position:absolute;width:190px;height:120px;border:1px solid rgba(255,106,0,.45);
+  border-radius:12px;background:linear-gradient(135deg,rgba(255,106,0,.22),rgba(255,255,255,.04));
+  display:grid;place-items:center;font-size:13px;color:#ffd8bd;text-align:center;
+  padding:8px;animation:drift linear infinite;will-change:transform;
+}
+@keyframes drift{
+  from{transform:translate3d(0,var(--y0),var(--z)) rotateZ(var(--r))}
+  to{transform:translate3d(0,calc(var(--y0) - 1500px),var(--z)) rotateZ(calc(var(--r) + 14deg))}
+}
+.stage{position:relative;z-index:2;transform-style:preserve-3d;transition:transform .15s}
+.logo{
+  font-size:clamp(40px,10vw,128px);font-weight:800;letter-spacing:.02em;line-height:1;
+  color:#fff;
+  text-shadow:0 1px 0 #ddd,0 2px 0 #bbb,0 3px 0 #999,0 4px 0 #777,0 5px 0 #555,0 6px 0 #333,0 14px 30px rgba(0,0,0,.8),0 0 60px rgba(255,106,0,.25);
+  animation:float 6s ease-in-out infinite;
+}
+.logo span{
+  color:var(--or);
+  text-shadow:0 1px 0 #d85a00,0 2px 0 #b84c00,0 3px 0 #983f00,0 4px 0 #783200,0 5px 0 #582400,0 6px 0 #381700,0 14px 30px rgba(0,0,0,.8),0 0 50px rgba(255,106,0,.7);
+}
+@keyframes float{50%{transform:translateY(-12px) rotateX(6deg) rotateY(-4deg)}}
+.tag{margin:22px 0 0;letter-spacing:.42em;font-size:clamp(11px,1.9vw,20px);color:#eee}
+.bulb{width:46px;margin:18px auto 0;filter:drop-shadow(0 0 12px var(--or));animation:glow 2.4s ease-in-out infinite;display:block}
+@keyframes glow{50%{filter:drop-shadow(0 0 26px var(--or))}}
+.founder{margin:26px 0 0;color:var(--mut)}.founder b{color:#fff}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 28px;border-radius:999px;border:1px solid var(--or);font-weight:600;font-size:15px;transition:.25s;cursor:pointer;display:inline-block}
+.btn.p{background:var(--or);color:#000}
+.btn:hover{box-shadow:0 0 28px rgba(255,106,0,.55);transform:translateY(-2px)}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--mut);font-size:12px;letter-spacing:.1em;animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{50%{transform:translateX(-50%) translateY(6px)}}
+.scroll-hint svg{width:20px;height:20px;stroke:var(--mut)}
+
+/* ───── SECTIONS ───── */
+section{padding:96px 5vw;max-width:1200px;margin:auto}
+h2{font-size:clamp(28px,4.5vw,48px);font-weight:800}
+h2::after{content:"";display:block;width:90px;height:4px;background:var(--or);margin-top:12px;border-radius:2px}
+.lead{color:var(--mut);max-width:60ch;margin-top:14px}
+
+/* ───── SERVICES ───── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:40px;perspective:900px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:26px;transition:transform .28s,border-color .28s,box-shadow .28s;
+  cursor:default;
+}
+.card:hover{transform:rotateX(6deg) rotateY(-6deg) translateY(-6px);border-color:var(--or);box-shadow:0 18px 40px rgba(255,106,0,.18)}
+.ic{width:54px;height:54px;border:2px solid var(--or);border-radius:12px;display:grid;place-items:center;margin-bottom:16px;background:rgba(255,106,0,.07)}
+.ic svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:16px;line-height:1.4;color:#fff}
+.card p{font-size:13px;color:var(--mut);margin-top:8px;line-height:1.5}
+
+/* ───── STATS ───── */
+#stats{background:linear-gradient(135deg,rgba(255,106,0,.08),rgba(5,5,5,0));border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 5vw;max-width:100%;margin:0}
+.stats-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;max-width:900px;margin:auto;text-align:center}
+.stat-num{font-size:clamp(36px,6vw,56px);font-weight:800;color:var(--or);line-height:1}
+.stat-label{color:var(--mut);font-size:14px;margin-top:6px}
+
+/* ───── ABOUT ───── */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about-text p{color:var(--mut);margin-top:14px;line-height:1.8}
+.box{
+  background:linear-gradient(135deg,#1a1a1a,#000);
+  border:1px solid var(--line);border-left:4px solid var(--or);
+  border-radius:16px;padding:34px;position:relative;overflow:hidden;
+}
+.box::before{content:"";position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,106,0,.15),transparent 70%)}
+.box small{color:var(--mut);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.box h3{margin:8px 0 4px;font-size:28px;font-weight:800}
+.box .role{color:var(--mut);font-size:14px}
+.box-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.box-tag{background:rgba(255,106,0,.12);border:1px solid rgba(255,106,0,.3);color:var(--or);font-size:12px;padding:4px 12px;border-radius:999px}
+
+/* ───── TESTIMONIALS ───── */
+#testimonials{max-width:100%;padding:96px 5vw;border-top:1px solid var(--line)}
+.test-inner{max-width:1200px;margin:auto}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:40px}
+.test-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;position:relative}
+.test-card::before{content:"\201C";position:absolute;top:12px;right:20px;font-size:72px;color:rgba(255,106,0,.2);line-height:1;font-family:serif}
+.stars{color:var(--or);font-size:16px;margin-bottom:10px;letter-spacing:2px}
+.test-card p{color:#ccc;font-size:14px;line-height:1.7;font-style:italic}
+.test-author{margin-top:16px;display:flex;align-items:center;gap:12px}
+.ava{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--or),#c94f00);display:grid;place-items:center;font-weight:700;font-size:15px;flex-shrink:0}
+.test-author strong{font-size:14px}
+.test-author span{font-size:12px;color:var(--mut)}
+
+/* ───── PRICING ───── */
+#pricing{max-width:1200px;padding:96px 5vw}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:40px}
+.price-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:20px;
+  padding:34px 28px;position:relative;transition:.28s;
+}
+.price-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.price-card.featured{border-color:var(--or);background:linear-gradient(160deg,#1f1200,#121212)}
+.badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--or);color:#000;font-size:11px;font-weight:800;padding:4px 16px;border-radius:999px;letter-spacing:.08em;white-space:nowrap}
+.price-name{font-size:14px;color:var(--mut);text-transform:uppercase;letter-spacing:.12em}
+.price-amount{font-size:clamp(32px,5vw,46px);font-weight:800;color:#fff;margin:10px 0 4px}
+.price-amount span{font-size:16px;font-weight:400;color:var(--mut)}
+.price-desc{font-size:13px;color:var(--mut);margin-bottom:20px}
+.price-features{list-style:none;margin-bottom:28px}
+.price-features li{font-size:14px;color:#ccc;padding:7px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+.price-features li::before{content:"✓";color:var(--or);font-weight:700;flex-shrink:0}
+.price-btn{display:block;text-align:center;padding:13px;border-radius:999px;border:1px solid var(--or);font-weight:600;font-size:14px;transition:.25s;cursor:pointer}
+.price-btn:hover{background:var(--or);color:#000;box-shadow:0 0 24px rgba(255,106,0,.5)}
+.price-card.featured .price-btn{background:var(--or);color:#000}
+.price-card.featured .price-btn:hover{box-shadow:0 0 32px rgba(255,106,0,.6)}
+
+/* ───── CONTACT ───── */
+#contact{text-align:center;max-width:1200px;padding:96px 5vw}
+#contact h2::after{margin-inline:auto}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px;text-align:left}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+.call{display:inline-block;margin-top:22px;font-size:clamp(26px,6vw,52px);font-weight:800;color:var(--or);transition:.25s}
+.call:hover{text-shadow:0 0 30px rgba(255,106,0,.6)}
+.soc{display:flex;gap:16px;justify-content:center;margin-top:30px}
+.soc a{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.25s}
+.soc a:hover{background:var(--or);border-color:var(--or);transform:translateY(-4px)}
+.soc svg{width:22px;height:22px;fill:#fff}
+.form-box{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:32px}
+.form-box h3{font-size:20px;margin-bottom:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+.form-box input,.form-box textarea,.form-box select{
+  width:100%;background:#1a1a1a;border:1px solid var(--line);border-radius:10px;
+  color:#fff;font-family:inherit;font-size:14px;padding:12px 16px;
+  margin-bottom:14px;transition:border-color .2s;resize:none;
+}
+.form-box input:focus,.form-box textarea:focus,.form-box select:focus{outline:none;border-color:var(--or)}
+.form-box textarea{height:120px}
+.form-box select option{background:#1a1a1a}
+.submit-btn{
+  width:100%;padding:14px;border-radius:999px;background:var(--or);
+  color:#000;font-weight:700;font-size:15px;border:none;cursor:pointer;
+  transition:.25s;font-family:inherit;
+}
+.submit-btn:hover{box-shadow:0 0 28px rgba(255,106,0,.55);transform:translateY(-2px)}
+.contact-info{display:flex;flex-direction:column;justify-content:center;gap:24px}
+.info-item{display:flex;align-items:flex-start;gap:16px}
+.info-icon{width:46px;height:46px;border-radius:12px;background:rgba(255,106,0,.1);border:1px solid rgba(255,106,0,.3);display:grid;place-items:center;flex-shrink:0}
+.info-icon svg{width:22px;height:22px;stroke:var(--or);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.info-label{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.info-value{font-size:16px;font-weight:600;margin-top:2px}
+
+/* ───── FOOTER ───── */
+footer{
+  text-align:center;color:var(--mut);
+  padding:48px 5vw calc(110px + env(safe-area-inset-bottom,0px));
+  border-top:1px solid var(--line);font-size:14px;
+}
+footer .foot-logo{font-size:22px;font-weight:800;letter-spacing:.12em;margin-bottom:12px;color:#fff}
+footer .foot-logo i{font-style:normal;color:var(--or)}
+footer .foot-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:16px 0;font-size:13px}
+footer .foot-links a:hover{color:var(--or)}
+footer .copy{margin-top:12px}
+
+/* ───── FABs ───── */
+.fab-wrap{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;flex-direction:column;align-items:center;gap:12px}
+.fab{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:.25s;cursor:pointer;text-decoration:none}
+.fab:hover{transform:scale(1.1)}
+.fab.call{background:var(--or);animation:ring 2s infinite}
+.fab.call svg{fill:#000;width:26px;height:26px}
+.fab.wa{background:var(--wa)}
+.fab.wa svg{fill:#fff;width:26px;height:26px}
+@keyframes ring{to{box-shadow:0 0 0 20px rgba(255,106,0,0)}}
+.fab-label{position:absolute;right:70px;background:#111;color:#fff;font-size:12px;padding:5px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
+.fab:hover .fab-label{opacity:1}
+
+/* ───── SCROLL REVEAL ───── */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+/* ───── TOAST ───── */
+.toast{
+  position:fixed;bottom:calc(100px + env(safe-area-inset-bottom,0px));left:50%;
+  transform:translateX(-50%) translateY(20px);
+  background:#1f1f1f;border:1px solid var(--or);color:#fff;
+  font-size:14px;padding:12px 24px;border-radius:999px;
+  opacity:0;transition:.4s;pointer-events:none;z-index:50;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ───── BACK TO TOP ───── */
+.btt{
+  position:fixed;left:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;
+  width:46px;height:46px;border-radius:50%;background:#1a1a1a;border:1px solid var(--line);
+  display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;
+}
+.btt.show{opacity:1;pointer-events:all}
+.btt:hover{background:var(--or);border-color:var(--or)}
+.btt svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ───── REDUCED MOTION ───── */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <b>GRAPHI<i>CUTS</i></b>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#services" class="mm-link">Services</a>
+  <a href="#pricing" class="mm-link">Pricing</a>
+  <a href="#about" class="mm-link">About</a>
+  <a href="#testimonials" class="mm-link">Reviews</a>
+  <a href="#contact" class="mm-link">Contact</a>
+</div>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div id="field" aria-hidden="true"></div>
+  <div class="stage" id="stage">
+    <h1 class="logo">GRAPHI<span>CUTS</span></h1>
+    <p class="tag">THE IDEA TO GLOW YOUR THOUGHTS</p>
+    <svg class="bulb" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+      <path d="M17 31c0-3-5-5-5-11a12 12 0 0 1 24 0c0 6-5 8-5 11z" fill="#fff"/>
+      <path d="M18 36h12M20 41h8"/>
+      <path d="M24 2v3M7 8l2 2M41 8l-2 2M2 20h3M43 20h3"/>
+    </svg>
+    <p class="founder">Founder: <b>D. Arun Prasanth</b></p>
+    <div class="btns">
+      <a class="btn p" href="#services">Our Services</a>
+      <a class="btn" href="tel:8610670804">📞 Call Now</a>
+      <a class="btn" href="https://wa.me/918610670804?text=Hi%20GRAPHICUTS%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" rel="noopener" style="background:#25d366;border-color:#25d366;color:#000">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <span>SCROLL</span>
+    <svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</header>
+
+<!-- ══ STATS ══ -->
+<div id="stats" aria-label="Key statistics">
+  <div class="stats-wrap">
+    <div class="rv">
+      <div class="stat-num" data-count="150">0</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="rv">
+      <div class="stat-num" data-count="98">0</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="rv">
+      <div class="stat-num" data-count="13">0</div>
+      <div class="stat-label">Services Offered</div>
+    </div>
+    <div class="rv">
+      <div class="stat-num" data-count="3">0</div>
+      <div class="stat-label">Years of Excellence</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <h2 class="rv">Our Services</h2>
+  <p class="lead rv">Creative, digital and IT services for businesses, professionals and brands – all under one roof.</p>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="about">
+  <div class="about-text rv">
+    <h2>Ideas that glow</h2>
+    <p>GRAPHICUTS is a digital creative and IT service agency. From a logo to a full website, from a social media campaign to an AI-generated video, we turn your thoughts into work that gets noticed.</p>
+    <p style="margin-top:14px">We believe every brand has a story worth telling – our job is to tell it brilliantly. With a passion for design and technology, we craft visuals and digital experiences that leave a lasting impression.</p>
+    <div style="margin-top:28px">
+      <a class="btn p" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+  <div class="box rv">
+    <small>Founder &amp; Creative Head</small>
+    <h3>D. Arun Prasanth</h3>
+    <div class="role">GRAPHICUTS – The idea to glow your thoughts</div>
+    <div class="box-tags">
+      <span class="box-tag">Graphic Design</span>
+      <span class="box-tag">Web Dev</span>
+      <span class="box-tag">AI Video</span>
+      <span class="box-tag">Digital Marketing</span>
+      <span class="box-tag">Branding</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<div id="testimonials">
+  <div class="test-inner">
+    <h2 class="rv">What clients say</h2>
+    <p class="lead rv">Real feedback from real people who trusted GRAPHICUTS.</p>
+    <div class="test-grid" id="testGrid"></div>
+  </div>
+</div>
+
+<!-- ══ PRICING ══ -->
+<section id="pricing">
+  <h2 class="rv">Transparent Pricing</h2>
+  <p class="lead rv">Simple packages tailored to your needs. Need something custom? Just call us.</p>
+  <div class="price-grid" id="priceGrid"></div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <h2 class="rv">Let's talk</h2>
+  <p class="lead rv" style="margin-inline:auto">Tell us what you want to build. We're here to make it happen.</p>
+
+  <div class="contact-grid">
+    <div class="contact-info rv">
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 4.2 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.45 2.1L9 10a16 16 0 0 0 5 5l1.3-1.3a2 2 0 0 1 2.1-.45c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9z"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Phone / WhatsApp</div>
+          <div class="info-value"><a href="tel:8610670804">8610670804</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Email</div>
+          <div class="info-value"><a href="mailto:graphicuts@gmail.com">graphicuts@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Working Hours</div>
+          <div class="info-value">Mon – Sat, 9 AM – 8 PM</div>
+        </div>
+      </div>
+      <div class="soc" style="justify-content:flex-start;margin-top:0">
+        <a href="https://www.instagram.com/graphicuts" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.2-3.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/graphicuts" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8C16.6 3.7 15.6 3.6 14.6 3.6c-2.6 0-4.2 1.5-4.2 4.3v2.6H7.6v3.3h2.8V22z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/@graphicuts" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18.1 5.6 12 5.6 12 5.6s-6.1 0-7.9.5A3 3 0 0 0 2 8.2C1.5 10 1.5 12 1.5 12s0 2 .5 3.8a3 3 0 0 0 2.1 2.1c1.8.5 7.9.5 7.9.5s6.1 0 7.9-.5a3 3 0 0 0 2.1-2.1c.5-1.8.5-3.8.5-3.8s0-2-.5-3.8zM10 15V9l5.2 3z"/></svg>
+        </a>
+        <a href="https://wa.me/918610670804" target="_blank" rel="noopener" aria-label="WhatsApp" style="background:rgba(37,211,102,.12);border-color:rgba(37,211,102,.3)">
+          <svg viewBox="0 0 24 24" style="fill:#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.472 2 2 6.472 2 11.998c0 1.761.457 3.413 1.253 4.853L2 22l5.274-1.221A9.955 9.955 0 0 0 11.998 22c5.526 0 9.998-4.472 9.998-9.998S17.524 2 11.998 2zm0 18.197a8.192 8.192 0 0 1-4.18-1.145l-.3-.178-3.129.724.746-3.049-.196-.313A8.159 8.159 0 0 1 3.803 11.998c0-4.521 3.676-8.197 8.195-8.197 4.52 0 8.196 3.676 8.196 8.197 0 4.52-3.676 8.199-8.196 8.199z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="form-box rv">
+      <h3>Send us a message</h3>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <input type="text" id="fname" name="name" placeholder="Your Name" required autocomplete="name">
+          <input type="tel" id="fphone" name="phone" placeholder="Phone Number" autocomplete="tel">
+        </div>
+        <input type="email" id="femail" name="email" placeholder="Email Address" autocomplete="email">
+        <select id="fservice" name="service">
+          <option value="" disabled selected>Select a Service</option>
+          <option>Digital Marketing Services</option>
+          <option>Social Media Promotions</option>
+          <option>Infographics Design</option>
+          <option>Professional CV &amp; Resume Design</option>
+          <option>Website Development</option>
+          <option>Digital Portfolio Creation</option>
+          <option>Digital Visiting Card Creation</option>
+          <option>Graphic Design Services</option>
+          <option>AI-Based Video Generation</option>
+          <option>Advertisement Video Creation</option>
+          <option>Pre-Production Works</option>
+          <option>Brochure &amp; Flyer Design</option>
+          <option>Logo Designing</option>
+          <option>Other</option>
+        </select>
+        <textarea id="fmsg" name="message" placeholder="Tell us about your project…"></textarea>
+        <button type="submit" class="submit-btn">Send Message ✦</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="foot-logo">GRAPHI<i>CUTS</i></div>
+  <div class="foot-links">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="copy">© 2026 GRAPHICUTS &nbsp;·&nbsp; Founder: D. Arun Prasanth &nbsp;·&nbsp; All rights reserved.</div>
+</footer>
+
+<!-- ══ FABs ══ -->
+<div class="fab-wrap">
+  <a class="fab wa" href="https://wa.me/918610670804?text=Hi%20GRAPHICUTS%2C%20I%27m%20interested%20in%20your%20services!" target="_blank" rel="noopener" aria-label="WhatsApp GRAPHICUTS" title="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.472 2 2 6.472 2 11.998c0 1.761.457 3.413 1.253 4.853L2 22l5.274-1.221A9.955 9.955 0 0 0 11.998 22c5.526 0 9.998-4.472 9.998-9.998S17.524 2 11.998 2zm0 18.197a8.192 8.192 0 0 1-4.18-1.145l-.3-.178-3.129.724.746-3.049-.196-.313A8.159 8.159 0 0 1 3.803 11.998c0-4.521 3.676-8.197 8.195-8.197 4.52 0 8.196 3.676 8.196 8.197 0 4.52-3.676 8.199-8.196 8.199z"/></svg>
+  </a>
+  <a class="fab call" href="tel:8610670804" aria-label="Call GRAPHICUTS" title="Call Now">
+    <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 4.2 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.45 2.1L9 10a16 16 0 0 0 5 5l1.3-1.3a2 2 0 0 1 2.1-.45c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9z"/></svg>
+  </a>
+</div>
+
+<!-- Back to top -->
+<button class="btt" id="btt" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<!-- ══ SCRIPT ══ -->
+<script>
+/* ── Data ── */
+var SERVICES=[
+  {n:"Digital Marketing Services",i:"M3 11v3l12 5V6L3 11zM19 8v8",d:"Boost your brand visibility with targeted campaigns across all digital platforms."},
+  {n:"Social Media Promotions",i:"M4 5h16v11H9l-5 4z",d:"Engaging content and growth strategies for Instagram, Facebook, YouTube & more."},
+  {n:"Infographics Design",i:"M4 20V10M10 20V4M16 20v-7M22 20H2",d:"Turn complex data into stunning, shareable visual stories."},
+  {n:"Professional CV & Resume Design",i:"M6 3h9l4 4v14H6zM9 12h7M9 16h7M9 8h3",d:"Stand out with a beautifully designed, ATS-friendly resume."},
+  {n:"Website Development",i:"M3 5h18v12H3zM8 10l-2 2 2 2M16 10l2 2-2 2M13 9l-2 6M8 21h8",d:"Fast, responsive and modern websites built for conversion."},
+  {n:"Digital Portfolio Creation",i:"M3 4h18v16H3zM3 9h18M7 14h4M7 17h4M15 12a2 2 0 1 0 0 .1",d:"Showcase your work with a professional digital portfolio."},
+  {n:"Digital Visiting Card Creation",i:"M3 6h18v12H3zM7 10h4M7 14h6M16 10a1.5 1.5 0 1 0 0 .1",d:"Interactive digital cards that make a lasting first impression."},
+  {n:"Graphic Design Services",i:"M12 3l4 8-4 10-4-10zM12 11v3",d:"Logos, banners, social media graphics – pixel-perfect designs for every need."},
+  {n:"AI-Based Video Generation",i:"M3 5h18v14H3zM10 9l5 3-5 3z",d:"Cutting-edge AI video generation for ads, explainers and social content."},
+  {n:"Advertisement Video Creation",i:"M3 9h18v11H3zM3 9l3-5h4L7 9M10 9l3-5h4l-3 5M10 13l4 2-4 2z",d:"High-impact video ads that drive clicks, leads and conversions."},
+  {n:"Pre-Production Works",i:"M3 8h10v8H3zM13 11l8-3v8l-8-3zM6 5a2 2 0 1 0 0 .1M11 5a2 2 0 1 0 0 .1",d:"Script, storyboard, planning and shoot coordination for any project."},
+  {n:"Brochure & Flyer Design",i:"M5 3h10l4 4v14H5zM8 11h8M8 15h8M8 7h4",d:"Print-ready brochures and flyers that communicate your message clearly."},
+  {n:"Logo Designing",i:"M12 2l5 8-5 12-5-12zM12 10v3",d:"Timeless, memorable logos crafted to define your brand identity."}
+];
+
+var REVIEWS=[
+  {name:"Rajan M.",init:"R",stars:5,text:"GRAPHICUTS completely transformed our brand. The logo they designed is clean, modern and exactly what we envisioned. Highly recommend!"},
+  {name:"Priya S.",init:"P",stars:5,text:"Got my resume redesigned and I landed an interview within a week! The design was stunning and professional. Thank you Arun!"},
+  {name:"Karthik V.",init:"K",stars:5,text:"Our social media engagement tripled after GRAPHICUTS took over our promotions. Very creative team with great turnaround time."},
+  {name:"Divya R.",init:"D",stars:5,text:"The website they built for us is beautiful, fast and mobile-friendly. We've seen a huge increase in inquiries since launch."},
+  {name:"Senthil N.",init:"S",stars:5,text:"The AI-generated video for our product launch went viral. GRAPHICUTS knows how to make content that connects with the audience."},
+  {name:"Meena T.",init:"M",stars:5,text:"Affordable pricing, quick delivery and incredible quality. Our visiting card design was a hit at the trade fair!"}
+];
+
+var PLANS=[
+  {name:"Starter",price:"₹999",desc:"Perfect for individuals & freelancers",features:["Logo Design","Digital Visiting Card","1 Social Media Graphic","Basic Brochure Design","3-Day Delivery"],featured:false},
+  {name:"Growth",price:"₹2,999",desc:"Best for small businesses",features:["Everything in Starter","Professional CV Design","Social Media Promotions (1 month)","Infographics (3 designs)","Website Landing Page","7-Day Delivery"],featured:true,badge:"MOST POPULAR"},
+  {name:"Pro",price:"₹6,999",desc:"For serious brands & businesses",features:["Everything in Growth","Full Website Development","AI Video Generation","Ad Video Creation","Pre-Production Works","Logo + Full Brand Identity","Priority Support"],featured:false}
+];
+
+/* ── Build Services ── */
+var g=document.getElementById("grid");
+SERVICES.forEach(function(s){
+  var d=document.createElement("div");
+  d.className="card rv";
+  d.innerHTML='<div class="ic"><svg viewBox="0 0 24 24"><path d="'+s.i+'"/></svg></div><h3>'+s.n.replace(/&/g,"&amp;")+'</h3><p>'+s.d+'</p>';
+  g.appendChild(d);
+});
+
+/* ── Build Reviews ── */
+var tg=document.getElementById("testGrid");
+REVIEWS.forEach(function(r){
+  var stars="★".repeat(r.stars);
+  var d=document.createElement("div");
+  d.className="test-card rv";
+  d.innerHTML='<div class="stars">'+stars+'</div><p>'+r.text+'</p><div class="test-author"><div class="ava">'+r.init+'</div><div><strong>'+r.name+'</strong><br><span>Verified Client</span></div></div>';
+  tg.appendChild(d);
+});
+
+/* ── Build Pricing ── */
+var pg=document.getElementById("priceGrid");
+PLANS.forEach(function(p){
+  var feats=p.features.map(function(f){return'<li>'+f+'</li>'}).join("");
+  var badge=p.badge?'<div class="badge">'+p.badge+'</div>':'';
+  var d=document.createElement("div");
+  d.className="price-card rv"+(p.featured?" featured":"");
+  d.innerHTML=badge+'<div class="price-name">'+p.name+'</div><div class="price-amount">'+p.price+'<span>/project</span></div><div class="price-desc">'+p.desc+'</div><ul class="price-features">'+feats+'</ul><a href="https://wa.me/918610670804?text=Hi%20GRAPHICUTS%2C%20I%27m%20interested%20in%20the%20'+encodeURIComponent(p.name)+'%20plan!" target="_blank" rel="noopener" class="price-btn">Get Started</a>';
+  pg.appendChild(d);
+});
+
+/* ── Floating tiles ── */
+var f=document.getElementById("field");
+for(var i=0;i<24;i++){
+  var t=document.createElement("div");
+  t.className="tile";
+  t.textContent=SERVICES[i%SERVICES.length].n;
+  t.style.left=(i%6)*17+2+"%";
+  t.style.top="55%";
+  t.style.setProperty("--y0",(Math.floor(i/6)*420-200)+"px");
+  t.style.setProperty("--z",(i%3)*90-60+"px");
+  t.style.setProperty("--r",(i*13%30-15)+"deg");
+  t.style.animationDuration=(26+i%5*6)+"s";
+  t.style.animationDelay="-"+(i*3)+"s";
+  f.appendChild(t);
+}
+
+/* ── 3-D tilt ── */
+var st=document.getElementById("stage");
+document.addEventListener("mousemove",function(e){
+  var x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
+  st.style.transform="rotateY("+x*14+"deg) rotateX("+-y*10+"deg)";
+});
+document.addEventListener("mouseleave",function(){st.style.transform="";});
+
+/* ── Scroll reveal ── */
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.classList.add("in");
+      /* counter animation */
+      var num=e.target.querySelector("[data-count]");
+      if(num){animateCount(num);}
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el);});
+
+/* ── Counter animation ── */
+function animateCount(el){
+  var target=+el.getAttribute("data-count");
+  var step=Math.ceil(target/60);
+  var cur=0;
+  var timer=setInterval(function(){
+    cur=Math.min(cur+step,target);
+    el.textContent=cur+(target>=100?"+":(target>10?"+":""));
+    if(cur>=target)clearInterval(timer);
+  },30);
+}
+
+/* ── Nav scroll effect ── */
+var nav=document.getElementById("nav");
+window.addEventListener("scroll",function(){
+  nav.classList.toggle("scrolled",scrollY>40);
+  btt.classList.toggle("show",scrollY>400);
+},{ passive:true });
+
+/* ── Back to top ── */
+var btt=document.getElementById("btt");
+btt.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+
+/* ── Mobile menu ── */
+var toggle=document.getElementById("navToggle");
+var menu=document.getElementById("mobileMenu");
+toggle.addEventListener("click",function(){
+  var open=toggle.classList.toggle("open");
+  menu.classList.toggle("open",open);
+  menu.setAttribute("aria-hidden",String(!open));
+  document.body.style.overflow=open?"hidden":"";
+});
+document.querySelectorAll(".mm-link").forEach(function(a){
+  a.addEventListener("click",function(){
+    toggle.classList.remove("open");
+    menu.classList.remove("open");
+    menu.setAttribute("aria-hidden","true");
+    document.body.style.overflow="";
+  });
+});
+
+/* ── Contact form ── */
+var toast=document.getElementById("toast");
+function showToast(msg,ms){
+  toast.textContent=msg;
+  toast.classList.add("show");
+  setTimeout(function(){toast.classList.remove("show");},ms||3000);
+}
+document.getElementById("contactForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var name=document.getElementById("fname").value.trim();
+  var phone=document.getElementById("fphone").value.trim();
+  var service=document.getElementById("fservice").value;
+  var msg=document.getElementById("fmsg").value.trim();
+  if(!name){showToast("⚠️ Please enter your name.");return;}
+  var text="Hi GRAPHICUTS!%0A%0AName: "+encodeURIComponent(name)+"%0APhone: "+encodeURIComponent(phone||"N/A")+"%0AService: "+encodeURIComponent(service||"N/A")+"%0AMessage: "+encodeURIComponent(msg||"N/A");
+  window.open("https://wa.me/918610670804?text="+text,"_blank","noopener");
+  showToast("✅ Redirecting to WhatsApp…",3000);
+  this.reset();
+});
+</script>
+</body>
+</html>
+
