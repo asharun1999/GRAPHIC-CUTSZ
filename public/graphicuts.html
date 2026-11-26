@@ -39,7 +39,7 @@
   "telephone":"+918610670804",
   "url":"https://graphicuts.com",
   "sameAs":[
-    "https://www.instagram.com/graphicuts",
+    "https://www.instagram.com/graphic_cutsz/",
     "https://www.facebook.com/graphicuts",
     "https://www.youtube.com/@graphicuts"
   ],
@@ -128,9 +128,33 @@ nav b i{font-style:normal;color:var(--or)}
   text-shadow:0 1px 0 #ddd,0 2px 0 #bbb,0 3px 0 #999,0 4px 0 #777,0 5px 0 #555,0 6px 0 #333,0 14px 30px rgba(0,0,0,.8),0 0 60px rgba(255,106,0,.25);
   animation:float 6s ease-in-out infinite;
 }
-.logo span{
+.logo > span:not(.c-nest){
   color:var(--or);
   text-shadow:0 1px 0 #d85a00,0 2px 0 #b84c00,0 3px 0 #983f00,0 4px 0 #783200,0 5px 0 #582400,0 6px 0 #381700,0 14px 30px rgba(0,0,0,.8),0 0 50px rgba(255,106,0,.7);
+}
+.logo .c-nest{
+  display:inline-grid;
+  place-items:center;
+  vertical-align:baseline;
+  color:#fff;
+}
+.logo .c-nest > .c-white,
+.logo .c-nest > .c-orange{
+  grid-area:1/1;
+  line-height:1;
+  letter-spacing:0;
+}
+.logo .c-nest > .c-white{
+  text-shadow:0 1px 0 #ddd,0 2px 0 #bbb,0 3px 0 #999,0 4px 0 #777,0 5px 0 #555,0 6px 0 #333,0 14px 30px rgba(0,0,0,.8),0 0 60px rgba(255,106,0,.25);
+}
+.logo .c-nest > .c-orange{
+  color:var(--or);
+  text-shadow:0 1px 0 #d85a00,0 2px 0 #b84c00,0 3px 0 #983f00,0 6px 14px rgba(0,0,0,.7),0 0 22px rgba(255,106,0,.65);
+  /* Downshift counters white C's downward 3D extrusion so gaps stay even in the visual hole */
+  transform:translate(5%,2%) scale(.41);
+  transform-origin:center;
+  pointer-events:none;
+  user-select:none;
 }
 @keyframes float{50%{transform:translateY(-12px) rotateX(6deg) rotateY(-4deg)}}
 .tag{margin:22px 0 0;letter-spacing:.42em;font-size:clamp(11px,1.9vw,20px);color:#eee}
@@ -267,6 +291,7 @@ footer .foot-logo{font-size:22px;font-weight:800;letter-spacing:.12em;margin-bot
 footer .foot-logo i{font-style:normal;color:var(--or)}
 footer .foot-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:16px 0;font-size:13px}
 footer .foot-links a:hover{color:var(--or)}
+footer .soc{margin-top:22px;margin-bottom:4px}
 footer .copy{margin-top:12px}
 
 /* ───── FABs ───── */
@@ -316,7 +341,7 @@ footer .copy{margin-top:12px}
 
 <!-- ══ NAV ══ -->
 <nav id="nav">
-  <b>GRAPHI<i>CUTS</i></b>
+  <b>GRAPHIC<i>UTSZ</i></b>
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
@@ -342,7 +367,7 @@ footer .copy{margin-top:12px}
 <header class="hero">
   <div id="field" aria-hidden="true"></div>
   <div class="stage" id="stage">
-    <h1 class="logo">GRAPHI<span>CUTS</span></h1>
+    <h1 class="logo">GRAPHI<span class="c-nest"><span class="c-white">C</span><span class="c-orange" aria-hidden="true">C</span></span><span>UTSZ</span></h1>
     <p class="tag">THE IDEA TO GLOW YOUR THOUGHTS</p>
     <svg class="bulb" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
       <path d="M17 31c0-3-5-5-5-11a12 12 0 0 1 24 0c0 6-5 8-5 11z" fill="#fff"/>
@@ -466,7 +491,7 @@ footer .copy{margin-top:12px}
         </div>
       </div>
       <div class="soc" style="justify-content:flex-start;margin-top:0">
-        <a href="https://www.instagram.com/graphicuts" target="_blank" rel="noopener" aria-label="Instagram">
+        <a href="https://www.instagram.com/graphic_cutsz/" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.2-3.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>
         </a>
         <a href="https://www.facebook.com/graphicuts" target="_blank" rel="noopener" aria-label="Facebook">
@@ -515,13 +540,27 @@ footer .copy{margin-top:12px}
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <div class="foot-logo">GRAPHI<i>CUTS</i></div>
+  <div class="foot-logo">GRAPHIC<i>UTSZ</i></div>
   <div class="foot-links">
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
     <a href="#about">About</a>
     <a href="#testimonials">Reviews</a>
     <a href="#contact">Contact</a>
+  </div>
+  <div class="soc">
+    <a href="https://www.instagram.com/graphic_cutsz/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.2-3.2a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/graphicuts" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8C16.6 3.7 15.6 3.6 14.6 3.6c-2.6 0-4.2 1.5-4.2 4.3v2.6H7.6v3.3h2.8V22z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@graphicuts" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18.1 5.6 12 5.6 12 5.6s-6.1 0-7.9.5A3 3 0 0 0 2 8.2C1.5 10 1.5 12 1.5 12s0 2 .5 3.8a3 3 0 0 0 2.1 2.1c1.8.5 7.9.5 7.9.5s6.1 0 7.9-.5a3 3 0 0 0 2.1-2.1c.5-1.8.5-3.8.5-3.8s0-2-.5-3.8zM10 15V9l5.2 3z"/></svg>
+    </a>
+    <a href="https://wa.me/918610670804" target="_blank" rel="noopener" aria-label="WhatsApp" style="background:rgba(37,211,102,.12);border-color:rgba(37,211,102,.3)">
+      <svg viewBox="0 0 24 24" style="fill:#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.472 2 2 6.472 2 11.998c0 1.761.457 3.413 1.253 4.853L2 22l5.274-1.221A9.955 9.955 0 0 0 11.998 22c5.526 0 9.998-4.472 9.998-9.998S17.524 2 11.998 2zm0 18.197a8.192 8.192 0 0 1-4.18-1.145l-.3-.178-3.129.724.746-3.049-.196-.313A8.159 8.159 0 0 1 3.803 11.998c0-4.521 3.676-8.197 8.195-8.197 4.52 0 8.196 3.676 8.196 8.197 0 4.52-3.676 8.199-8.196 8.199z"/></svg>
+    </a>
   </div>
   <div class="copy">© 2026 GRAPHICUTS &nbsp;·&nbsp; Founder: D. Arun Prasanth &nbsp;·&nbsp; All rights reserved.</div>
 </footer>
